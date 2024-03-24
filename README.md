@@ -36,7 +36,7 @@ $HTTP["host"] == "your-hostname" {
         "^(/|$)" => "/index.php"
     )
 }
-
+…
 ```
 
 That should do the trick.
