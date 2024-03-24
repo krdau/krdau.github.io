@@ -25,6 +25,7 @@ server.modules = (
         "mod_redirect",
         "mod_rewrite"
 )
+…
 ```
 
 That should do the trick.
