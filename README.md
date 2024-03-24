@@ -39,5 +39,32 @@ $HTTP["host"] == "your-hostname" {
 …
 ```
 
-That should do the trick.
+That should do the trick for lighty.
+
+If you are on Apache2 there is (should be) a ".htaccess" file where url-rewriting for apache2 isorganized:
+
+```
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # May be required to access sub directories
+    #RewriteBase /
+
+    # Deny access to internal dirs and files by passing the URL to Pico
+    RewriteRule ^(config|content|vendor|CHANGELOG\.md|composer\.(json|lock|phar>
+    RewriteRule (^\.|/\.)(?!well-known(/|$)) index.php [L]
+
+    # Enable URL rewriting
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+
+    <IfModule mod_env.c>
+        # Let Pico know about available URL rewriting
+        SetEnv PICO_URL_REWRITING 1
+    </IfModule>
+</IfModule>
+```
+
+
+
 
