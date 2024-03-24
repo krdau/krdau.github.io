@@ -41,7 +41,7 @@ $HTTP["host"] == "your-hostname" {
 
 That should do the trick for lighty.
 
-If you are on Apache2 there is (should be) a ".htaccess" file where url-rewriting for apache2 isorganized:
+If you are on Apache2 there is (should be) a ".htaccess" file where url-rewriting for apache2 is organized:
 
 ```
 <IfModule mod_rewrite.c>
