@@ -26,5 +26,6 @@ server.modules = (
         "mod_rewrite"
 )
 `
+
 That should do the trick.
 
