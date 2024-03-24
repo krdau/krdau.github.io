@@ -14,7 +14,8 @@ Pico CMS provides subpage-URLs like "/page/?subpage". To avoid that behaviour yo
 rewrite_url: true
 …
 `
-An in "/etc/lighttpd/lighttpd.conf" make sure to activate "mod_rewrite"
+
+And in "/etc/lighttpd/lighttpd.conf" make sure to activate "mod_rewrite"
 
 `
 server.modules = (
