@@ -7,4 +7,11 @@ Often you need to investigate in forums, etc. to find a suitable solution.
 Currently the upgrade to php8.x results in numerous error warnings or complete failure.
 
 One of my latest chalenges was the url-rewriting under lighttpd:
-Pico CMS provides subpage-URLs like "/page/?subpage". To avoid that behaviour you have to change settings in "config.yml"
+Pico CMS provides subpage-URLs like "/page/?subpage". To avoid that behaviour you have to change settings in  "/var/www/config.yml" (to be adopted if your pico is installed ina subdirectory):
+
+`
+…
+rewrite_url: true
+…
+`
+
