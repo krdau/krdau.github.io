@@ -15,7 +15,7 @@ rewrite_url: true
 …
 ```
 
-And in "/etc/lighttpd/lighttpd.conf" make sure to activate "mod_rewrite"
+And in "/etc/lighttpd/lighttpd.conf" make sure to have "mod_rewrite" activated
 
 ```
 server.modules = (
