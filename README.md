@@ -26,6 +26,17 @@ server.modules = (
         "mod_rewrite"
 )
 …
+$HTTP["host"] == "your-hostname" {
+    url.rewrite-once = (
+        "^/(config|content|vendor|composer\.(json|lock|phar))(/|$)" => "/index.>
+        "^/(.+/)?\.(?!well-known(/|$))" => "/index.php"
+    )
+
+    url.rewrite-if-not-file = (
+        "^(/|$)" => "/index.php"
+    )
+}
+
 ```
 
 That should do the trick.
