@@ -1,4 +1,4 @@
-# Pico - A stupidly simple, blazing fast, flat file CMS
+# Pico - A stupidly simple, blazing fast, flat file CMS?
 Sharing my learnings on pico cms based websites (servers: lighttpd and apache2).
 
 Since Pico CMS and the (community) plugins are not fluently updated, some Plugins do not work (properly).
